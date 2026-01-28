@@ -121,8 +121,30 @@ class MoleculeFinder {
 
     overlay.style.display = 'flex';
 
+    let isProcessing = false; // 防止重複點擊
+
     const handleAuth = () => {
+      // 防止重複點擊
+      if (isProcessing) return;
+
       const password = input.value.trim();
+
+      // 檢查密碼是否為空
+      if (!password) {
+        error.textContent = this.i18n[this.currentLanguage].authError;
+        error.classList.add('show');
+        input.focus();
+
+        setTimeout(() => {
+          error.classList.remove('show');
+        }, 3000);
+        return;
+      }
+
+      // 設置處理中狀態
+      isProcessing = true;
+      btn.disabled = true;
+      btn.textContent = '⏳';
 
       if (password === this.PASSWORD) {
         // 儲存授權資訊
@@ -130,24 +152,46 @@ class MoleculeFinder {
           timestamp: Date.now()
         }));
 
-        overlay.style.display = 'none';
-        this.init();
+        // 短暫延遲以顯示成功狀態
+        btn.textContent = '✓';
+        setTimeout(() => {
+          overlay.style.display = 'none';
+          this.init();
+        }, 300);
       } else {
+        // 密碼錯誤
         error.classList.add('show');
         input.value = '';
         input.focus();
 
+        // 恢復按鈕狀態
         setTimeout(() => {
+          isProcessing = false;
+          btn.disabled = false;
+          btn.textContent = this.i18n[this.currentLanguage].authButton;
           error.classList.remove('show');
-        }, 3000);
+        }, 2000);
       }
     };
 
-    btn.onclick = handleAuth;
-    input.onkeypress = (e) => {
-      if (e.key === 'Enter') handleAuth();
+    // 使用 addEventListener 並移除舊的事件
+    const newBtn = btn.cloneNode(true);
+    btn.parentNode.replaceChild(newBtn, btn);
+
+    newBtn.addEventListener('click', handleAuth);
+
+    // Enter 鍵處理
+    const handleKeyPress = (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        handleAuth();
+      }
     };
 
+    input.addEventListener('keypress', handleKeyPress);
+
+    // 清空並聚焦
+    input.value = '';
     input.focus();
   }
 
