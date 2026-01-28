@@ -37,6 +37,9 @@ npm-debug.log*
 uploads/*
 !uploads/.gitkeep
 
+# Office temp files
+~$*
+
 # Python
 __pycache__/
 *.py[cod]

@@ -18,6 +18,8 @@ class MoleculeFinder {
         subtitle: '精油化學成分多語言對照查詢',
         searchPlaceholder: '搜尋分子名稱 (支援中文、英文、法文)',
         searchStats: '共 {total} 筆分子資料',
+        initialTitle: '開始搜尋分子',
+        initialHint: '在上方輸入分子名稱以開始查詢',
         noResults: '找不到符合的分子',
         noResultsHint: '請嘗試其他關鍵字',
         french: '法文',
@@ -36,6 +38,8 @@ class MoleculeFinder {
         subtitle: 'Essential Oil Chemical Components Multilingual Reference',
         searchPlaceholder: 'Search molecule names (Chinese, English, French)',
         searchStats: 'Total {total} molecules',
+        initialTitle: 'Start Searching',
+        initialHint: 'Enter a molecule name above to begin your search',
         noResults: 'No molecules found',
         noResultsHint: 'Please try other keywords',
         french: 'French',
@@ -54,6 +58,8 @@ class MoleculeFinder {
         subtitle: 'Référence Multilingue des Composants Chimiques des Huiles Essentielles',
         searchPlaceholder: 'Rechercher des noms de molécules (chinois, anglais, français)',
         searchStats: 'Total {total} molécules',
+        initialTitle: 'Commencer la Recherche',
+        initialHint: 'Entrez un nom de molécule ci-dessus pour commencer',
         noResults: 'Aucune molécule trouvée',
         noResultsHint: 'Veuillez essayer d\'autres mots-clés',
         french: 'Français',
@@ -215,6 +221,12 @@ class MoleculeFinder {
     try {
       const history = localStorage.getItem(this.HISTORY_KEY);
       this.searchHistory = history ? JSON.parse(history) : [];
+
+      // 過濾掉無效的歷史記錄
+      this.searchHistory = this.searchHistory.filter(item => {
+        if (typeof item === 'string') return true; // 相容舊格式
+        return item.moleculeId && item.displayText;
+      });
     } catch (e) {
       this.searchHistory = [];
     }
@@ -224,11 +236,29 @@ class MoleculeFinder {
   saveSearchHistory(keyword) {
     if (!keyword || keyword.length < 2) return;
 
-    // 移除重複項目
-    this.searchHistory = this.searchHistory.filter(item => item !== keyword);
+    // 找到第一個匹配的分子
+    const matchedMolecule = this.molecules.find(molecule => {
+      const k = keyword.toLowerCase();
+      return (
+        molecule.french.toLowerCase().includes(k) ||
+        molecule.english.toLowerCase().includes(k) ||
+        molecule.chinese.toLowerCase().includes(k)
+      );
+    });
 
-    // 新增到最前面
-    this.searchHistory.unshift(keyword);
+    if (!matchedMolecule) return;
+
+    // 移除重複的分子 ID
+    this.searchHistory = this.searchHistory.filter(
+      item => item.moleculeId !== matchedMolecule.id
+    );
+
+    // 新增到最前面，儲存關鍵字和分子資料
+    this.searchHistory.unshift({
+      keyword: keyword,
+      moleculeId: matchedMolecule.id,
+      displayText: this.getDisplayText(matchedMolecule, keyword)
+    });
 
     // 最多保留 10 筆
     this.searchHistory = this.searchHistory.slice(0, 10);
@@ -238,6 +268,21 @@ class MoleculeFinder {
 
     // 更新 UI
     this.renderSearchHistory();
+  }
+
+  // 取得顯示文字（用戶輸入的語言版本）
+  getDisplayText(molecule, keyword) {
+    const k = keyword.toLowerCase();
+
+    if (molecule.chinese.toLowerCase().includes(k)) {
+      return molecule.chinese;
+    } else if (molecule.english.toLowerCase().includes(k)) {
+      return molecule.english;
+    } else if (molecule.french.toLowerCase().includes(k)) {
+      return molecule.french;
+    }
+
+    return molecule.chinese; // 預設顯示中文
   }
 
   // 清除搜尋歷史
@@ -265,9 +310,9 @@ class MoleculeFinder {
         </button>
       </div>
       <div class="history-tags">
-        ${this.searchHistory.map(keyword => `
-          <span class="history-tag" onclick="moleculeFinder.applyHistorySearch('${keyword}')">
-            ${keyword}
+        ${this.searchHistory.map((item, index) => `
+          <span class="history-tag" onclick="moleculeFinder.showHistoryMolecule(${index})">
+            ${item.displayText || item}
           </span>
         `).join('')}
       </div>
@@ -277,18 +322,81 @@ class MoleculeFinder {
     container.classList.add('show');
   }
 
-  // 應用歷史搜尋
-  applyHistorySearch(keyword) {
+  // 顯示歷史分子的完整資訊
+  showHistoryMolecule(index) {
+    const historyItem = this.searchHistory[index];
+
+    // 相容舊格式（純字串）
+    if (typeof historyItem === 'string') {
+      const searchInput = document.getElementById('searchInput');
+      searchInput.value = historyItem;
+      this.handleSearch(historyItem);
+      return;
+    }
+
+    // 找到該分子
+    const molecule = this.molecules.find(m => m.id === historyItem.moleculeId);
+
+    if (!molecule) {
+      // 如果找不到分子，移除該歷史記錄
+      this.searchHistory.splice(index, 1);
+      localStorage.setItem(this.HISTORY_KEY, JSON.stringify(this.searchHistory));
+      this.renderSearchHistory();
+      return;
+    }
+
+    // 清空搜尋框
     const searchInput = document.getElementById('searchInput');
-    searchInput.value = keyword;
-    this.handleSearch(keyword);
+    searchInput.value = '';
+
+    // 顯示該分子的完整資訊
+    this.showMoleculeDetail(molecule);
+  }
+
+  // 顯示單個分子的完整資訊
+  showMoleculeDetail(molecule) {
+    const container = document.getElementById('resultsContainer');
+    const t = this.i18n[this.currentLanguage];
+
+    const html = `
+      <div class="result-item" data-id="${molecule.id}">
+        <div class="molecule-id">#${molecule.id}</div>
+        <div class="molecule-names">
+          <div class="molecule-name">
+            <strong>${t.french}:</strong> ${this.escapeHtml(molecule.french)}
+          </div>
+          <div class="molecule-name">
+            <strong>${t.english}:</strong> ${this.escapeHtml(molecule.english)}
+          </div>
+          <div class="molecule-name">
+            <strong>${t.chinese}:</strong> ${this.escapeHtml(molecule.chinese)}
+          </div>
+        </div>
+      </div>
+    `;
+
+    container.innerHTML = html;
   }
 
   // 初始化 UI
   initUI() {
     this.updateStats();
-    this.renderResults();
+    this.showInitialState();
     this.renderSearchHistory();
+  }
+
+  // 顯示初始空狀態
+  showInitialState() {
+    const container = document.getElementById('resultsContainer');
+    const t = this.i18n[this.currentLanguage];
+
+    container.innerHTML = `
+      <div class="no-results">
+        <div class="no-results-icon">🌿</div>
+        <h3>${t.initialTitle}</h3>
+        <p>${t.initialHint}</p>
+      </div>
+    `;
   }
 
   // 綁定事件
@@ -414,16 +522,18 @@ class MoleculeFinder {
     keyword = keyword.trim().toLowerCase();
 
     if (!keyword) {
-      this.filteredResults = [...this.molecules];
-    } else {
-      this.filteredResults = this.molecules.filter(molecule => {
-        return (
-          molecule.french.toLowerCase().includes(keyword) ||
-          molecule.english.toLowerCase().includes(keyword) ||
-          molecule.chinese.toLowerCase().includes(keyword)
-        );
-      });
+      // 清空搜尋時顯示初始狀態
+      this.showInitialState();
+      return;
     }
+
+    this.filteredResults = this.molecules.filter(molecule => {
+      return (
+        molecule.french.toLowerCase().includes(keyword) ||
+        molecule.english.toLowerCase().includes(keyword) ||
+        molecule.chinese.toLowerCase().includes(keyword)
+      );
+    });
 
     this.renderResults(keyword);
   }
@@ -504,7 +614,17 @@ class MoleculeFinder {
     });
 
     this.updateLanguage();
-    this.renderResults();
+
+    // 檢查搜尋框是否有內容
+    const searchInput = document.getElementById('searchInput');
+    const keyword = searchInput.value.trim();
+
+    if (!keyword) {
+      this.showInitialState();
+    } else {
+      this.renderResults(keyword);
+    }
+
     this.renderSearchHistory();
   }
 
