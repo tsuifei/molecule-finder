@@ -36,7 +36,7 @@ class AdminPanel {
     try {
       const { timestamp } = JSON.parse(authData);
       const now = Date.now();
-      const duration = 24 * 60 * 60 * 1000; // 24 小時
+      const duration = 7 * 24 * 60 * 60 * 1000; // 7 天
 
       if (now - timestamp > duration) {
         localStorage.removeItem(this.AUTH_KEY);

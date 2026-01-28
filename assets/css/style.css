@@ -131,31 +131,35 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 1rem 1.5rem;
 }
 
 /* 頭部 */
 header {
   text-align: center;
-  margin-bottom: 3rem;
-  padding: 2rem 0;
+  margin-bottom: 1.5rem;
+  padding: 1rem 0 0 0;
 }
 
 .logo {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.1em;
 }
 
 h1 {
   color: var(--primary-color);
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .subtitle {
   color: var(--text-light);
-  font-size: 1rem;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
 }
 
 /* 語言切換 */
@@ -163,7 +167,7 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 0.8rem;
-  margin: 1.5rem 0;
+  margin: 1rem 0 0.5rem 0;
 }
 
 .lang-btn {
@@ -197,10 +201,10 @@ h1 {
 /* 搜尋區域 */
 .search-section {
   background: var(--bg-white);
-  padding: 2.5rem;
+  padding: 2rem 2rem 1.5rem 2rem;
   border-radius: 20px;
   box-shadow: var(--shadow-soft);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .search-box {
@@ -346,10 +350,10 @@ h1 {
 /* 結果顯示 */
 .results-section {
   background: var(--bg-white);
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 20px;
   box-shadow: var(--shadow-soft);
-  min-height: 400px;
+  min-height: 300px;
 }
 
 .results-header {
@@ -430,19 +434,29 @@ h1 {
 /* RWD 響應式設計 */
 @media (max-width: 768px) {
   .container {
-    padding: 1.5rem 1rem;
+    padding: 1rem;
+  }
+
+  header {
+    margin-bottom: 1rem;
+    padding: 0.5rem 0 0 0;
+  }
+
+  .logo {
+    font-size: 1.5rem;
   }
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
   .search-section {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
+    margin-bottom: 1rem;
   }
 
   .results-section {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .result-item {
@@ -460,7 +474,7 @@ h1 {
   }
 
   .logo {
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
 
   .search-input {

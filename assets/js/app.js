@@ -9,7 +9,7 @@ class MoleculeFinder {
     this.PASSWORD = 'france2026';
     this.AUTH_KEY = 'molecule_auth';
     this.HISTORY_KEY = 'search_history';
-    this.AUTH_DURATION = 24 * 60 * 60 * 1000; // 24 小時
+    this.AUTH_DURATION = 7 * 24 * 60 * 60 * 1000; // 7 天
     this.searchHistory = [];
 
     this.i18n = {
