@@ -162,30 +162,36 @@ h1 {
 .language-switcher {
   display: flex;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.8rem;
   margin: 1.5rem 0;
 }
 
 .lang-btn {
-  padding: 0.5rem 1.2rem;
+  width: 48px;
+  height: 48px;
+  padding: 0;
   background: var(--bg-white);
-  border: 2px solid var(--border-color);
-  border-radius: 20px;
+  border: 3px solid var(--border-color);
+  border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 0.9rem;
-  color: var(--text-dark);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 
 .lang-btn.active {
-  background: var(--primary-color);
-  color: white;
+  background: var(--bg-white);
   border-color: var(--primary-color);
+  transform: scale(1.1);
+  box-shadow: 0 0 0 4px rgba(123, 168, 146, 0.15);
 }
 
 .lang-btn:hover:not(.active) {
   border-color: var(--primary-color);
-  color: var(--primary-color);
+  transform: scale(1.05);
 }
 
 /* 搜尋區域 */
@@ -228,6 +234,108 @@ h1 {
   pointer-events: none;
 }
 
+/* 搜尋建議下拉 */
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--bg-white);
+  border: 2px solid var(--border-color);
+  border-top: none;
+  border-radius: 0 0 16px 16px;
+  max-height: 300px;
+  overflow-y: auto;
+  display: none;
+  z-index: 100;
+  box-shadow: var(--shadow-medium);
+}
+
+.search-suggestions.show {
+  display: block;
+}
+
+.suggestion-item {
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.95rem;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover {
+  background: var(--bg-light);
+  color: var(--primary-color);
+}
+
+.suggestion-item .highlight {
+  background: rgba(123, 168, 146, 0.2);
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+/* 搜尋歷史 */
+.search-history {
+  margin-top: 1rem;
+  display: none;
+}
+
+.search-history.show {
+  display: block;
+}
+
+.history-title {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clear-history {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.clear-history:hover {
+  background: rgba(212, 175, 122, 0.1);
+}
+
+.history-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.history-tag {
+  background: var(--bg-light);
+  color: var(--text-dark);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border-color);
+}
+
+.history-tag:hover {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
 .search-stats {
   text-align: center;
   margin-top: 1rem;
@@ -245,14 +353,7 @@ h1 {
 }
 
 .results-header {
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid var(--border-color);
-}
-
-.results-header h3 {
-  color: var(--primary-color);
-  font-size: 1.3rem;
+  display: none;
 }
 
 .result-item {
@@ -311,26 +412,6 @@ h1 {
   opacity: 0.5;
 }
 
-/* 管理員連結 */
-.admin-link {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  background: var(--accent-color);
-  color: white;
-  padding: 1rem 1.5rem;
-  border-radius: 50px;
-  text-decoration: none;
-  box-shadow: var(--shadow-medium);
-  transition: all 0.3s ease;
-  font-weight: 600;
-}
-
-.admin-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 30px rgba(212, 175, 122, 0.3);
-}
-
 /* 載入動畫 */
 .loading {
   display: inline-block;
@@ -366,13 +447,6 @@ h1 {
 
   .result-item {
     padding: 1rem;
-  }
-
-  .admin-link {
-    bottom: 1rem;
-    right: 1rem;
-    padding: 0.8rem 1.2rem;
-    font-size: 0.9rem;
   }
 
   .auth-box {

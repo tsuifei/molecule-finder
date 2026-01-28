@@ -8,7 +8,9 @@ class MoleculeFinder {
     this.currentLanguage = 'zh'; // 預設繁體中文
     this.PASSWORD = 'france2026';
     this.AUTH_KEY = 'molecule_auth';
+    this.HISTORY_KEY = 'search_history';
     this.AUTH_DURATION = 24 * 60 * 60 * 1000; // 24 小時
+    this.searchHistory = [];
 
     this.i18n = {
       zh: {
@@ -16,57 +18,54 @@ class MoleculeFinder {
         subtitle: '精油化學成分多語言對照查詢',
         searchPlaceholder: '搜尋分子名稱 (支援中文、英文、法文)',
         searchStats: '共 {total} 筆分子資料',
-        resultsTitle: '搜尋結果',
-        resultsCount: '找到 {count} 筆結果',
         noResults: '找不到符合的分子',
         noResultsHint: '請嘗試其他關鍵字',
         french: '法文',
         english: '英文',
         chinese: '中文',
-        adminLink: '資料管理',
         authTitle: '🌿 訪問驗證',
         authDescription: '請輸入密碼以訪問芳香分子資料庫',
         authPlaceholder: '請輸入密碼',
         authButton: '進入系統',
-        authError: '密碼錯誤，請重試'
+        authError: '密碼錯誤，請重試',
+        historyTitle: '最近搜尋',
+        clearHistory: '清除'
       },
       en: {
         title: 'Molecule Finder',
         subtitle: 'Essential Oil Chemical Components Multilingual Reference',
         searchPlaceholder: 'Search molecule names (Chinese, English, French)',
         searchStats: 'Total {total} molecules',
-        resultsTitle: 'Search Results',
-        resultsCount: 'Found {count} results',
         noResults: 'No molecules found',
         noResultsHint: 'Please try other keywords',
         french: 'French',
         english: 'English',
         chinese: 'Chinese',
-        adminLink: 'Admin',
         authTitle: '🌿 Authentication',
         authDescription: 'Please enter password to access the molecule database',
         authPlaceholder: 'Enter password',
         authButton: 'Enter',
-        authError: 'Incorrect password, please try again'
+        authError: 'Incorrect password, please try again',
+        historyTitle: 'Recent Searches',
+        clearHistory: 'Clear'
       },
       fr: {
         title: 'Recherche de Molécules',
         subtitle: 'Référence Multilingue des Composants Chimiques des Huiles Essentielles',
         searchPlaceholder: 'Rechercher des noms de molécules (chinois, anglais, français)',
         searchStats: 'Total {total} molécules',
-        resultsTitle: 'Résultats de Recherche',
-        resultsCount: '{count} résultats trouvés',
         noResults: 'Aucune molécule trouvée',
         noResultsHint: 'Veuillez essayer d\'autres mots-clés',
         french: 'Français',
         english: 'Anglais',
         chinese: 'Chinois',
-        adminLink: 'Admin',
         authTitle: '🌿 Authentification',
         authDescription: 'Veuillez entrer le mot de passe pour accéder à la base de données',
         authPlaceholder: 'Entrez le mot de passe',
         authButton: 'Entrer',
-        authError: 'Mot de passe incorrect, veuillez réessayer'
+        authError: 'Mot de passe incorrect, veuillez réessayer',
+        historyTitle: 'Recherches Récentes',
+        clearHistory: 'Effacer'
       }
     };
 
@@ -82,6 +81,9 @@ class MoleculeFinder {
 
     // 載入分子資料
     await this.loadMolecules();
+
+    // 載入搜尋歷史
+    this.loadSearchHistory();
 
     // 初始化 UI
     this.initUI();
@@ -164,18 +166,129 @@ class MoleculeFinder {
     }
   }
 
+  // 載入搜尋歷史
+  loadSearchHistory() {
+    try {
+      const history = localStorage.getItem(this.HISTORY_KEY);
+      this.searchHistory = history ? JSON.parse(history) : [];
+    } catch (e) {
+      this.searchHistory = [];
+    }
+  }
+
+  // 儲存搜尋歷史
+  saveSearchHistory(keyword) {
+    if (!keyword || keyword.length < 2) return;
+
+    // 移除重複項目
+    this.searchHistory = this.searchHistory.filter(item => item !== keyword);
+
+    // 新增到最前面
+    this.searchHistory.unshift(keyword);
+
+    // 最多保留 10 筆
+    this.searchHistory = this.searchHistory.slice(0, 10);
+
+    // 儲存到 localStorage
+    localStorage.setItem(this.HISTORY_KEY, JSON.stringify(this.searchHistory));
+
+    // 更新 UI
+    this.renderSearchHistory();
+  }
+
+  // 清除搜尋歷史
+  clearSearchHistory() {
+    this.searchHistory = [];
+    localStorage.removeItem(this.HISTORY_KEY);
+    this.renderSearchHistory();
+  }
+
+  // 渲染搜尋歷史
+  renderSearchHistory() {
+    const container = document.getElementById('searchHistory');
+    const t = this.i18n[this.currentLanguage];
+
+    if (this.searchHistory.length === 0) {
+      container.classList.remove('show');
+      return;
+    }
+
+    const html = `
+      <div class="history-title">
+        <span>📝 ${t.historyTitle}</span>
+        <button class="clear-history" onclick="moleculeFinder.clearSearchHistory()">
+          ${t.clearHistory}
+        </button>
+      </div>
+      <div class="history-tags">
+        ${this.searchHistory.map(keyword => `
+          <span class="history-tag" onclick="moleculeFinder.applyHistorySearch('${keyword}')">
+            ${keyword}
+          </span>
+        `).join('')}
+      </div>
+    `;
+
+    container.innerHTML = html;
+    container.classList.add('show');
+  }
+
+  // 應用歷史搜尋
+  applyHistorySearch(keyword) {
+    const searchInput = document.getElementById('searchInput');
+    searchInput.value = keyword;
+    this.handleSearch(keyword);
+  }
+
   // 初始化 UI
   initUI() {
     this.updateStats();
     this.renderResults();
+    this.renderSearchHistory();
   }
 
   // 綁定事件
   bindEvents() {
-    // 搜尋輸入
     const searchInput = document.getElementById('searchInput');
+    const suggestionsBox = document.getElementById('searchSuggestions');
+
+    // 搜尋輸入
+    let searchTimeout;
     searchInput.addEventListener('input', (e) => {
-      this.handleSearch(e.target.value);
+      const keyword = e.target.value;
+
+      // 清除之前的定時器
+      clearTimeout(searchTimeout);
+
+      // 延遲搜尋以改善性能
+      searchTimeout = setTimeout(() => {
+        this.handleSearch(keyword);
+
+        // 顯示建議
+        if (keyword.trim().length > 0) {
+          this.showSuggestions(keyword);
+        } else {
+          suggestionsBox.classList.remove('show');
+        }
+      }, 300);
+    });
+
+    // 點擊外部關閉建議
+    document.addEventListener('click', (e) => {
+      if (!searchInput.contains(e.target) && !suggestionsBox.contains(e.target)) {
+        suggestionsBox.classList.remove('show');
+      }
+    });
+
+    // Enter 鍵儲存搜尋歷史
+    searchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        const keyword = searchInput.value.trim();
+        if (keyword) {
+          this.saveSearchHistory(keyword);
+          suggestionsBox.classList.remove('show');
+        }
+      }
     });
 
     // 語言切換
@@ -184,6 +297,72 @@ class MoleculeFinder {
         this.switchLanguage(e.target.dataset.lang);
       });
     });
+  }
+
+  // 顯示搜尋建議
+  showSuggestions(keyword) {
+    const suggestionsBox = document.getElementById('searchSuggestions');
+    keyword = keyword.trim().toLowerCase();
+
+    if (!keyword) {
+      suggestionsBox.classList.remove('show');
+      return;
+    }
+
+    // 取得建議（最多 8 筆）
+    const suggestions = this.molecules
+      .filter(molecule => {
+        return (
+          molecule.french.toLowerCase().includes(keyword) ||
+          molecule.english.toLowerCase().includes(keyword) ||
+          molecule.chinese.toLowerCase().includes(keyword)
+        );
+      })
+      .slice(0, 8);
+
+    if (suggestions.length === 0) {
+      suggestionsBox.classList.remove('show');
+      return;
+    }
+
+    // 渲染建議
+    const html = suggestions.map(molecule => {
+      const displayText = this.getSuggestionText(molecule, keyword);
+      return `
+        <div class="suggestion-item" onclick="moleculeFinder.applySuggestion('${this.escapeHtml(displayText)}')">
+          ${this.highlightText(displayText, keyword)}
+        </div>
+      `;
+    }).join('');
+
+    suggestionsBox.innerHTML = html;
+    suggestionsBox.classList.add('show');
+  }
+
+  // 取得建議顯示文字
+  getSuggestionText(molecule, keyword) {
+    keyword = keyword.toLowerCase();
+
+    if (molecule.french.toLowerCase().includes(keyword)) {
+      return molecule.french;
+    } else if (molecule.english.toLowerCase().includes(keyword)) {
+      return molecule.english;
+    } else if (molecule.chinese.toLowerCase().includes(keyword)) {
+      return molecule.chinese;
+    }
+
+    return molecule.french;
+  }
+
+  // 應用建議
+  applySuggestion(text) {
+    const searchInput = document.getElementById('searchInput');
+    const suggestionsBox = document.getElementById('searchSuggestions');
+
+    searchInput.value = text;
+    this.handleSearch(text);
+    this.saveSearchHistory(text);
+    suggestionsBox.classList.remove('show');
   }
 
   // 搜尋處理
@@ -208,16 +387,7 @@ class MoleculeFinder {
   // 渲染結果
   renderResults(keyword = '') {
     const container = document.getElementById('resultsContainer');
-    const header = document.getElementById('resultsHeader');
     const t = this.i18n[this.currentLanguage];
-
-    // 更新標題
-    if (this.filteredResults.length > 0) {
-      header.innerHTML = `
-        <h3>${t.resultsTitle}</h3>
-        <p>${t.resultsCount.replace('{count}', this.filteredResults.length)}</p>
-      `;
-    }
 
     // 渲染結果
     if (this.filteredResults.length === 0) {
@@ -255,10 +425,22 @@ class MoleculeFinder {
 
   // 高亮關鍵字
   highlightText(text, keyword) {
-    if (!keyword) return text;
+    if (!keyword) return this.escapeHtml(text);
 
-    const regex = new RegExp(`(${keyword})`, 'gi');
-    return text.replace(regex, '<span class="highlight">$1</span>');
+    const regex = new RegExp(`(${this.escapeRegex(keyword)})`, 'gi');
+    return this.escapeHtml(text).replace(regex, '<span class="highlight">$1</span>');
+  }
+
+  // 轉義 HTML
+  escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
+  // 轉義正則表達式
+  escapeRegex(text) {
+    return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 
   // 更新統計資訊
@@ -279,6 +461,7 @@ class MoleculeFinder {
 
     this.updateLanguage();
     this.renderResults();
+    this.renderSearchHistory();
   }
 
   // 更新語言文字
@@ -288,7 +471,6 @@ class MoleculeFinder {
     document.getElementById('pageTitle').textContent = t.title;
     document.getElementById('pageSubtitle').textContent = t.subtitle;
     document.getElementById('searchInput').placeholder = t.searchPlaceholder;
-    document.getElementById('adminLink').textContent = t.adminLink;
 
     // 更新授權介面
     document.getElementById('authTitle').textContent = t.authTitle;
