@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="芳香分子查詢系統 - 精油化學成分多語言對照查詢">
+  <meta name="keywords" content="精油,芳香分子,化學成分,essential oils,molecules">
+  <meta name="author" content="VibeCoding">
+  <title>芳香分子查詢系統 | Molecule Finder</title>
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <!-- 密碼保護覆蓋層 -->
+  <div class="auth-overlay" id="authOverlay">
+    <div class="auth-box">
+      <h2 id="authTitle">🌿 訪問驗證</h2>
+      <p id="authDescription">請輸入密碼以訪問芳香分子資料庫</p>
+      <input
+        type="password"
+        class="auth-input"
+        id="authPassword"
+        placeholder="請輸入密碼"
+        autocomplete="off"
+      >
+      <button class="auth-btn" id="authBtn">進入系統</button>
+      <p class="error-message" id="authError">密碼錯誤，請重試</p>
+    </div>
+  </div>
+
+  <!-- 主容器 -->
+  <div class="container">
+    <!-- 頭部 -->
+    <header>
+      <div class="logo">🧪</div>
+      <h1 id="pageTitle">芳香分子查詢系統</h1>
+      <p class="subtitle" id="pageSubtitle">精油化學成分多語言對照查詢</p>
+
+      <!-- 語言切換 -->
+      <div class="language-switcher">
+        <button class="lang-btn active" data-lang="zh">繁體中文</button>
+        <button class="lang-btn" data-lang="en">English</button>
+        <button class="lang-btn" data-lang="fr">Français</button>
+      </div>
+    </header>
+
+    <!-- 搜尋區域 -->
+    <section class="search-section">
+      <div class="search-box">
+        <input
+          type="text"
+          class="search-input"
+          id="searchInput"
+          placeholder="搜尋分子名稱 (支援中文、英文、法文)"
+          autocomplete="off"
+        >
+        <span class="search-icon">🔍</span>
+      </div>
+      <div class="search-stats" id="searchStats">共 0 筆分子資料</div>
+    </section>
+
+    <!-- 結果顯示 -->
+    <section class="results-section">
+      <div class="results-header" id="resultsHeader">
+        <h3>搜尋結果</h3>
+      </div>
+      <div id="resultsContainer">
+        <div class="no-results">
+          <div class="no-results-icon">🌿</div>
+          <h3>開始搜尋分子</h3>
+          <p>在上方輸入分子名稱以開始查詢</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 管理員連結 -->
+  <a href="./admin.html" class="admin-link" id="adminLink">資料管理</a>
+
+  <!-- JavaScript -->
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>

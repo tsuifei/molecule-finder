@@ -1,0 +1,405 @@
+/* 自然療癒風格 - Molecule Finder */
+
+:root {
+  /* 自然色調 */
+  --primary-color: #7ba892;
+  --secondary-color: #a8c9b8;
+  --accent-color: #d4af7a;
+  --text-dark: #3e4a3d;
+  --text-light: #6b7f6a;
+  --bg-light: #f9faf8;
+  --bg-white: #ffffff;
+  --border-color: #e0e5df;
+  --shadow-soft: 0 2px 12px rgba(123, 168, 146, 0.08);
+  --shadow-medium: 0 4px 24px rgba(123, 168, 146, 0.12);
+
+  /* 字體 */
+  --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --font-mono: "SF Mono", Monaco, "Cascadia Code", monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background: linear-gradient(135deg, #f9faf8 0%, #eef3ed 100%);
+  color: var(--text-dark);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* 密碼保護覆蓋層 */
+.auth-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(123, 168, 146, 0.95) 0%, rgba(168, 201, 184, 0.95) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(10px);
+}
+
+.auth-box {
+  background: var(--bg-white);
+  padding: 3rem 2.5rem;
+  border-radius: 24px;
+  box-shadow: var(--shadow-medium);
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+}
+
+.auth-box h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.auth-box p {
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: var(--font-mono);
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(123, 168, 146, 0.1);
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.auth-btn:active {
+  transform: translateY(0);
+}
+
+.error-message {
+  color: #d9534f;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: none;
+}
+
+.error-message.show {
+  display: block;
+  animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  75% { transform: translateX(8px); }
+}
+
+/* 主容器 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* 頭部 */
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.logo {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+/* 語言切換 */
+.language-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.lang-btn {
+  padding: 0.5rem 1.2rem;
+  background: var(--bg-white);
+  border: 2px solid var(--border-color);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.lang-btn.active {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.lang-btn:hover:not(.active) {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* 搜尋區域 */
+.search-section {
+  background: var(--bg-white);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 2rem;
+}
+
+.search-box {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1.2rem 3.5rem 1.2rem 1.5rem;
+  border: 2px solid var(--border-color);
+  border-radius: 16px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(123, 168, 146, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-light);
+  font-size: 1.3rem;
+  pointer-events: none;
+}
+
+.search-stats {
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* 結果顯示 */
+.results-section {
+  background: var(--bg-white);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+  min-height: 400px;
+}
+
+.results-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.results-header h3 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+}
+
+.result-item {
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background: var(--bg-light);
+  border-radius: 12px;
+  border-left: 4px solid var(--accent-color);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.result-item:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-soft);
+}
+
+.result-item .molecule-id {
+  color: var(--text-light);
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  margin-bottom: 0.5rem;
+}
+
+.result-item .molecule-names {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.molecule-name {
+  font-size: 1rem;
+}
+
+.molecule-name strong {
+  color: var(--text-light);
+  font-weight: 600;
+  display: inline-block;
+  width: 60px;
+}
+
+.molecule-name .highlight {
+  background: linear-gradient(120deg, rgba(212, 175, 122, 0.3) 0%, rgba(212, 175, 122, 0.1) 100%);
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-light);
+}
+
+.no-results-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+/* 管理員連結 */
+.admin-link {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--accent-color);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: var(--shadow-medium);
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.admin-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(212, 175, 122, 0.3);
+}
+
+/* 載入動畫 */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--border-color);
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* RWD 響應式設計 */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .search-section {
+    padding: 1.5rem;
+  }
+
+  .results-section {
+    padding: 1.5rem;
+  }
+
+  .result-item {
+    padding: 1rem;
+  }
+
+  .admin-link {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .auth-box {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .search-input {
+    font-size: 1rem;
+    padding: 1rem 3rem 1rem 1rem;
+  }
+
+  .language-switcher {
+    flex-wrap: wrap;
+  }
+
+  .molecule-name strong {
+    width: 50px;
+    font-size: 0.9rem;
+  }
+}

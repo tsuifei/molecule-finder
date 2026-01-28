@@ -1,0 +1,2334 @@
+{
+  "molecules": [
+    {
+      "id": 1,
+      "french": "[6]-gingérol",
+      "english": "[6]-gingerol",
+      "chinese": "[6]-薑醇"
+    },
+    {
+      "id": 2,
+      "french": "1,8-cinéole",
+      "english": "1,8-cineole",
+      "chinese": "1,8-桉油醇"
+    },
+    {
+      "id": 3,
+      "french": "10-épi-γ-eudesmol",
+      "english": "10-epi-γ-eudesmol",
+      "chinese": "10-表-γ-桉葉醇"
+    },
+    {
+      "id": 4,
+      "french": "15-copaénol",
+      "english": "15-copaenol",
+      "chinese": "15-古巴醇"
+    },
+    {
+      "id": 5,
+      "french": "2-méthyl butyryl-nitrile",
+      "english": "2-Methylbutyronitrile",
+      "chinese": "2-甲基丁腈"
+    },
+    {
+      "id": 6,
+      "french": "2-methyl-propanol",
+      "english": "2-methyl-propanol",
+      "chinese": "異丁醇"
+    },
+    {
+      "id": 7,
+      "french": "5- et 8-méthoxy-psoralènes",
+      "english": "5&8-methoxy-psoralen",
+      "chinese": "5及8-甲氧基補骨脂素"
+    },
+    {
+      "id": 8,
+      "french": "7-méthoxycoumarine (herniarine)",
+      "english": "7-methoxycoumarin",
+      "chinese": "7-甲氧基香豆素"
+    },
+    {
+      "id": 9,
+      "french": "8-hydroxybergaptène",
+      "english": "8-hydroxybergapten",
+      "chinese": "8-羥基佛手柑內酯"
+    },
+    {
+      "id": 10,
+      "french": "A",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 11,
+      "french": "abiétanoïdes",
+      "english": "abietanoids",
+      "chinese": "松香烷二萜類"
+    },
+    {
+      "id": 12,
+      "french": "acétate de carquejyl",
+      "english": "carquejyl acetate",
+      "chinese": "5-亞甲基-6-異丙烯基-3-環\n己烯-1-醇乙酸酯"
+    },
+    {
+      "id": 13,
+      "french": "acétate de fragranyle",
+      "english": "fragranyl acetate",
+      "chinese": "乙酸呋喃酯"
+    },
+    {
+      "id": 14,
+      "french": "acétate d'(iso)-artémisyle",
+      "english": "(iso)-artemisyl acetate",
+      "chinese": "乙酸異蒿酯"
+    },
+    {
+      "id": 15,
+      "french": "acétate d'artémisyle",
+      "english": "artemisyl acetate",
+      "chinese": "乙酸蒿酯"
+    },
+    {
+      "id": 16,
+      "french": "acétate d'isopulégyle",
+      "english": "isopulegyl acetate",
+      "chinese": "乙酸異胡薄荷酯"
+    },
+    {
+      "id": 17,
+      "french": "acétate d'α-nécrodol",
+      "english": "α-necrodyl acetate",
+      "chinese": "乙酸α-食屍酯"
+    },
+    {
+      "id": 18,
+      "french": "acétate de 1-acétoxychavicol",
+      "english": "1-acetoxychavicol acetate",
+      "chinese": "1-乙酰氧基胡椒酚乙酸酯"
+    },
+    {
+      "id": 19,
+      "french": "acétate de benzyle",
+      "english": "benzyl acetate",
+      "chinese": "乙酸芐酯"
+    },
+    {
+      "id": 20,
+      "french": "acétate de bornyle",
+      "english": "bornyl acetate",
+      "chinese": "乙酸龍腦酯"
+    },
+    {
+      "id": 21,
+      "french": "acétate de citronnellyle",
+      "english": "citronellyl acetate",
+      "chinese": "乙酸香茅酯"
+    },
+    {
+      "id": 22,
+      "french": "acétate de dihydrocarvyle",
+      "english": "dihydrocarvyl acetate",
+      "chinese": "乙酸二氫香芹酯"
+    },
+    {
+      "id": 23,
+      "french": "acétate de géranyle",
+      "english": "geranyl acetate",
+      "chinese": "乙酸香葉酯/乙酸牻牛兒酯"
+    },
+    {
+      "id": 24,
+      "french": "acétate de lavandulyle",
+      "english": "lavandulyl acetate",
+      "chinese": "乙酸薰衣草酯"
+    },
+    {
+      "id": 25,
+      "french": "acétate de linalyle",
+      "english": "linalyl acetate",
+      "chinese": "乙酸芳樟酯/乙酸沉香酯"
+    },
+    {
+      "id": 26,
+      "french": "acétate de luisiéryle",
+      "english": "luisieryl acetate",
+      "chinese": "乙酸食屍酯"
+    },
+    {
+      "id": 27,
+      "french": "acétate de menthyle",
+      "english": "(-)-menthyl acetate",
+      "chinese": "乙酸薄荷酯"
+    },
+    {
+      "id": 28,
+      "french": "acétate de myrtényle",
+      "english": "myrtenyl acetate",
+      "chinese": "乙酸桃金孃酯"
+    },
+    {
+      "id": 29,
+      "french": "acétate de néryle",
+      "english": "neryl acetate",
+      "chinese": "乙酸橙花酯"
+    },
+    {
+      "id": 30,
+      "french": "acétate de périllyle",
+      "english": "perillyl acetate",
+      "chinese": "乙酸紫蘇酯"
+    },
+    {
+      "id": 31,
+      "french": "acétate de sabinyle",
+      "english": "sabinyl acetate",
+      "chinese": "乙酸香檜酯"
+    },
+    {
+      "id": 32,
+      "french": "acétate de terpényle",
+      "english": "terpinyl acetate",
+      "chinese": "乙酸萜品酯"
+    },
+    {
+      "id": 33,
+      "french": "acétate de thymyle",
+      "english": "thymyl acetate",
+      "chinese": "乙酸百里酯"
+    },
+    {
+      "id": 34,
+      "french": "acétate de tr-pinocarvyle",
+      "english": "tr-pinocarvyl acetate",
+      "chinese": "乙酸反式松香芹酯"
+    },
+    {
+      "id": 35,
+      "french": "acétate d'incensyle",
+      "english": "incensole acetate",
+      "chinese": "乙酸因香酯"
+    },
+    {
+      "id": 36,
+      "french": "acétate d'octyle",
+      "english": "octyl acetate",
+      "chinese": "乙酸辛酯"
+    },
+    {
+      "id": 37,
+      "french": "acétates de carvyle",
+      "english": "carvyl acetates",
+      "chinese": "乙酸香芹酯"
+    },
+    {
+      "id": 38,
+      "french": "acétophénone",
+      "english": "acetophenone",
+      "chinese": "苯乙酮"
+    },
+    {
+      "id": 39,
+      "french": "achilline",
+      "english": "achillin",
+      "chinese": "蓍草素"
+    },
+    {
+      "id": 40,
+      "french": "acide géranique",
+      "english": "geranic acid",
+      "chinese": "香葉酸"
+    },
+    {
+      "id": 41,
+      "french": "acides benzoïque",
+      "english": "benzoic acids",
+      "chinese": "苯甲酸"
+    },
+    {
+      "id": 42,
+      "french": "acides cinnamique",
+      "english": "cinnamic acid",
+      "chinese": "肉桂酸"
+    },
+    {
+      "id": 43,
+      "french": "acides salicylique",
+      "english": "salicylic acid",
+      "chinese": "水楊酸"
+    },
+    {
+      "id": 44,
+      "french": "aesculine",
+      "english": "aesculin",
+      "chinese": "七葉樹素"
+    },
+    {
+      "id": 45,
+      "french": "alcool anisique",
+      "english": "anisic alcohol",
+      "chinese": "大茴香醇"
+    },
+    {
+      "id": 46,
+      "french": "alcool benzylique",
+      "english": "benzyl alcohol",
+      "chinese": "苯甲醇"
+    },
+    {
+      "id": 47,
+      "french": "alcool cinnamique",
+      "english": "cinnamic alcohol",
+      "chinese": "肉桂醇"
+    },
+    {
+      "id": 48,
+      "french": "alcool lilas",
+      "english": "lilac alcohol",
+      "chinese": "紫丁香醇"
+    },
+    {
+      "id": 49,
+      "french": "alcool phényléthylique",
+      "english": "phenylethyl alcohol",
+      "chinese": "苯乙醇"
+    },
+    {
+      "id": 50,
+      "french": "aldéhyde lilas",
+      "english": "lilac aldehyde",
+      "chinese": "紫丁香醛"
+    },
+    {
+      "id": 51,
+      "french": "aldéhyde périllique",
+      "english": "perillic aldehyde",
+      "chinese": "紫蘇醛"
+    },
+    {
+      "id": 52,
+      "french": "andrographolide",
+      "english": "androprapholide",
+      "chinese": "穿心蓮內酯"
+    },
+    {
+      "id": 53,
+      "french": "anéthole",
+      "english": "anethole",
+      "chinese": "茴香腦"
+    },
+    {
+      "id": 54,
+      "french": "angélate d'isobutyle",
+      "english": "isobutyl angelate",
+      "chinese": "歐白芷酸異丁酯"
+    },
+    {
+      "id": 55,
+      "french": "angélates",
+      "english": "angelates",
+      "chinese": "歐白芷酸"
+    },
+    {
+      "id": 56,
+      "french": "angélicine",
+      "english": "angelicin",
+      "chinese": "白芷素"
+    },
+    {
+      "id": 57,
+      "french": "anisaldéhyde",
+      "english": "anisaldehyde",
+      "chinese": "大茴香醛"
+    },
+    {
+      "id": 58,
+      "french": "anisatine",
+      "english": "anisatin",
+      "chinese": "莽草素"
+    },
+    {
+      "id": 59,
+      "french": "anthranylate de méthyle",
+      "english": "methyl anthranilate",
+      "chinese": "鄰氨基苯甲酸甲酯"
+    },
+    {
+      "id": 60,
+      "french": "apiol",
+      "english": "apiol",
+      "chinese": "芹菜腦"
+    },
+    {
+      "id": 61,
+      "french": "archangélicine",
+      "english": "archangelicin",
+      "chinese": "歐白芷素"
+    },
+    {
+      "id": 62,
+      "french": "ar-curcumène",
+      "english": "ar-curcumene",
+      "chinese": "芳-薑黃烯"
+    },
+    {
+      "id": 63,
+      "french": "aristolactone",
+      "english": "aristolactone",
+      "chinese": "馬兜鈴內酯"
+    },
+    {
+      "id": 64,
+      "french": "artémisia alcool",
+      "english": "artemisia alcohol",
+      "chinese": "蒿醇"
+    },
+    {
+      "id": 65,
+      "french": "artemisia cétone",
+      "english": "artemisia ketone",
+      "chinese": "蒿酮"
+    },
+    {
+      "id": 66,
+      "french": "artémisinine",
+      "english": "artemisinin",
+      "chinese": "青蒿素"
+    },
+    {
+      "id": 67,
+      "french": "ar-turmérone",
+      "english": "ar-turmerone",
+      "chinese": "芳-薑黃酮"
+    },
+    {
+      "id": 68,
+      "french": "asarol",
+      "english": "asarol",
+      "chinese": "細辛腦"
+    },
+    {
+      "id": 69,
+      "french": "ascaridole",
+      "english": "ascaridole",
+      "chinese": "驅蛔素"
+    },
+    {
+      "id": 70,
+      "french": "atlantone",
+      "english": "atlantone",
+      "chinese": "大西洋酮"
+    },
+    {
+      "id": 71,
+      "french": "atractylénolide",
+      "english": "atractylenolide",
+      "chinese": "白术內酯"
+    },
+    {
+      "id": 72,
+      "french": "australol",
+      "english": "australol",
+      "chinese": "異丙基苯酚"
+    },
+    {
+      "id": 73,
+      "french": "B",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 74,
+      "french": "baékeol",
+      "english": "baekeol",
+      "chinese": "貝克醇"
+    },
+    {
+      "id": 75,
+      "french": "bakuchiol",
+      "english": "bakuchiol",
+      "chinese": "補骨酯粉"
+    },
+    {
+      "id": 76,
+      "french": "belladone",
+      "english": "belladonna",
+      "chinese": "顛茄"
+    },
+    {
+      "id": 77,
+      "french": "benzaldéhyde",
+      "english": "benzaldehyde",
+      "chinese": "苯甲醛"
+    },
+    {
+      "id": 78,
+      "french": "benzoate de benzyles",
+      "english": "benzyl benzoate",
+      "chinese": "苯甲酸苄酯"
+    },
+    {
+      "id": 79,
+      "french": "benzoquinone",
+      "english": "benzoquinone",
+      "chinese": "苯醌"
+    },
+    {
+      "id": 80,
+      "french": "benzylique",
+      "english": "benzyl",
+      "chinese": "苯甲基/芐基"
+    },
+    {
+      "id": 81,
+      "french": "bergamotène",
+      "english": "bergamotene",
+      "chinese": "香柑油烯"
+    },
+    {
+      "id": 82,
+      "french": "bergamotine",
+      "english": "bergamottin",
+      "chinese": "佛手柑素"
+    },
+    {
+      "id": 83,
+      "french": "bergaptène",
+      "english": "bergapten",
+      "chinese": "佛手柑內酯"
+    },
+    {
+      "id": 84,
+      "french": "bisabolène",
+      "english": "bisabolene",
+      "chinese": "甜沒藥烯"
+    },
+    {
+      "id": 85,
+      "french": "bisabolol",
+      "english": "bisabolol",
+      "chinese": "沒藥醇"
+    },
+    {
+      "id": 86,
+      "french": "bisabololoxides",
+      "english": "bisabolol oxide",
+      "chinese": "沒藥醇氧化物"
+    },
+    {
+      "id": 87,
+      "french": "bornéol",
+      "english": "borneol",
+      "chinese": "龍腦"
+    },
+    {
+      "id": 88,
+      "french": "bulnésol",
+      "english": "bulnesol",
+      "chinese": "布蔾醇"
+    },
+    {
+      "id": 89,
+      "french": "butanol",
+      "english": "butanol",
+      "chinese": "丁醇"
+    },
+    {
+      "id": 90,
+      "french": "butanol oxime",
+      "english": "butanol oxime",
+      "chinese": "丁醇肟"
+    },
+    {
+      "id": 91,
+      "french": "C",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 92,
+      "french": "cadinol",
+      "english": "cadinol",
+      "chinese": "杜松醇"
+    },
+    {
+      "id": 93,
+      "french": "calaménène",
+      "english": "calamenene",
+      "chinese": "菖蒲烯"
+    },
+    {
+      "id": 94,
+      "french": "calophylloide",
+      "english": "calophylloide",
+      "chinese": "海棠果素"
+    },
+    {
+      "id": 95,
+      "french": "camphre",
+      "english": "camphor",
+      "chinese": "樟腦"
+    },
+    {
+      "id": 96,
+      "french": "cannabinoïde",
+      "english": "cannabinoide",
+      "chinese": "大麻素"
+    },
+    {
+      "id": 97,
+      "french": "carotol",
+      "english": "carotol",
+      "chinese": "胡蘿蔔醇"
+    },
+    {
+      "id": 98,
+      "french": "carvacrol",
+      "english": "carvacrol",
+      "chinese": "香芹芥酚"
+    },
+    {
+      "id": 99,
+      "french": "carvéol",
+      "english": "carveol",
+      "chinese": "香芹醇"
+    },
+    {
+      "id": 100,
+      "french": "carvone",
+      "english": "carvone",
+      "chinese": "香芹酮"
+    },
+    {
+      "id": 101,
+      "french": "caryophyllène oxyde",
+      "english": "caryophyllene oxide",
+      "chinese": "石竹烯氧化物"
+    },
+    {
+      "id": 102,
+      "french": "cèdrènes",
+      "english": "cedrene",
+      "chinese": "雪松烯"
+    },
+    {
+      "id": 103,
+      "french": "cédrol",
+      "english": "cedrol",
+      "chinese": "雪松醇"
+    },
+    {
+      "id": 104,
+      "french": "cmembrane",
+      "english": "cembrane",
+      "chinese": "煙草烷"
+    },
+    {
+      "id": 105,
+      "french": "cembrene",
+      "english": "cembrene",
+      "chinese": "西柏烯"
+    },
+    {
+      "id": 106,
+      "french": "chamazulène",
+      "english": "chamazulene",
+      "chinese": "母菊天藍烴"
+    },
+    {
+      "id": 107,
+      "french": "chavibétol",
+      "english": "chavibetol",
+      "chinese": "萎葉酚"
+    },
+    {
+      "id": 108,
+      "french": "chavicol",
+      "english": "chavicol",
+      "chinese": "蔞葉酚"
+    },
+    {
+      "id": 109,
+      "french": "chavicol méthyl éther",
+      "english": "chavicol methyl ether=methyl chavicol",
+      "chinese": "甲基醚婁葉酚"
+    },
+    {
+      "id": 110,
+      "french": "cinnamaldéhyde",
+      "english": "cinnamaldehyde",
+      "chinese": "肉桂醛"
+    },
+    {
+      "id": 111,
+      "french": "cinnamate de cinnamyle",
+      "english": "cinnamyl cinnamate",
+      "chinese": "肉桂酸肉桂酯"
+    },
+    {
+      "id": 112,
+      "french": "cinnamate de méthyle",
+      "english": "methyl cinnamate",
+      "chinese": "肉桂酸甲酯"
+    },
+    {
+      "id": 113,
+      "french": "cinnamic acid",
+      "english": "cinnamic acid",
+      "chinese": "肉桂酸/桂皮酸鹽"
+    },
+    {
+      "id": 114,
+      "french": "cis-3-hexénol",
+      "english": "cis-3-hexenol",
+      "chinese": "葉醇"
+    },
+    {
+      "id": 115,
+      "french": "cis-asroltriméthyléther",
+      "english": "cis-asarol tri-methyl ether",
+      "chinese": "順式細辛腦三甲醚"
+    },
+    {
+      "id": 116,
+      "french": "citrals",
+      "english": "citral",
+      "chinese": "檸檬醛"
+    },
+    {
+      "id": 117,
+      "french": "citriodiol",
+      "english": "citriodiol",
+      "chinese": "檸檬桉醇"
+    },
+    {
+      "id": 118,
+      "french": "citronella acid",
+      "english": "citronella acid",
+      "chinese": "香茅酸"
+    },
+    {
+      "id": 119,
+      "french": "citronnellal",
+      "english": "citronellal",
+      "chinese": "香茅醛"
+    },
+    {
+      "id": 120,
+      "french": "citronnellol",
+      "english": "citronellol",
+      "chinese": "香茅醇"
+    },
+    {
+      "id": 121,
+      "french": "citroptène",
+      "english": "citropten",
+      "chinese": "檸檬油素"
+    },
+    {
+      "id": 122,
+      "french": "clérodadiénols",
+      "english": "clerodadienols",
+      "chinese": "氯丁二醇"
+    },
+    {
+      "id": 123,
+      "french": "costus lactone",
+      "english": "costus lactone",
+      "chinese": "木香內脂"
+    },
+    {
+      "id": 124,
+      "french": "coumarines",
+      "english": "coumarin",
+      "chinese": "香豆素"
+    },
+    {
+      "id": 125,
+      "french": "crésolée",
+      "english": "cresol",
+      "chinese": "甲酚"
+    },
+    {
+      "id": 126,
+      "french": "cryptone",
+      "english": "cryptone",
+      "chinese": "隱酮"
+    },
+    {
+      "id": 127,
+      "french": "cubébène",
+      "english": "cubebene",
+      "chinese": "蓽澄茄烯"
+    },
+    {
+      "id": 128,
+      "french": "cubénol",
+      "english": "cubenol",
+      "chinese": "蓽澄茄醇"
+    },
+    {
+      "id": 129,
+      "french": "cuménol",
+      "english": "cumenol",
+      "chinese": "異丙基苯酚"
+    },
+    {
+      "id": 130,
+      "french": "cuminaldéhyde / cuminal",
+      "english": "cuminaldehyde / cuminal",
+      "chinese": "小茴香醛"
+    },
+    {
+      "id": 131,
+      "french": "cuprène",
+      "english": "cuprene",
+      "chinese": "乙炔聚合物"
+    },
+    {
+      "id": 132,
+      "french": "curcumanolide",
+      "english": "curcumanolide",
+      "chinese": "莪术螺內酯"
+    },
+    {
+      "id": 133,
+      "french": "curcumène",
+      "english": "curcumene",
+      "chinese": "薑黃烯"
+    },
+    {
+      "id": 134,
+      "french": "curdione",
+      "english": "curdione",
+      "chinese": "莪术二酮"
+    },
+    {
+      "id": 135,
+      "french": "curzérène",
+      "english": "curzerene",
+      "chinese": "莪术烯"
+    },
+    {
+      "id": 136,
+      "french": "cypérène",
+      "english": "cyperene",
+      "chinese": "香附烯(莎草烯)"
+    },
+    {
+      "id": 137,
+      "french": "cypérol",
+      "english": "cyperol",
+      "chinese": "香附醇"
+    },
+    {
+      "id": 138,
+      "french": "cypérone",
+      "english": "cyperone",
+      "chinese": "香附酮"
+    },
+    {
+      "id": 139,
+      "french": "D",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 140,
+      "french": "damascénone",
+      "english": "damascenone",
+      "chinese": "大馬烯酮"
+    },
+    {
+      "id": 141,
+      "french": "damascone",
+      "english": "damascone",
+      "chinese": "大馬士革酮"
+    },
+    {
+      "id": 142,
+      "french": "daucol",
+      "english": "daucol",
+      "chinese": "胡蘿蔔腦"
+    },
+    {
+      "id": 143,
+      "french": "davanone",
+      "english": "davanone",
+      "chinese": "印蒿酮"
+    },
+    {
+      "id": 144,
+      "french": "décanal",
+      "english": "decanal",
+      "chinese": "癸醛"
+    },
+    {
+      "id": 145,
+      "french": "déhydro aromadendiène",
+      "english": "dehydro aromadendrene",
+      "chinese": "脫氫香橙烯"
+    },
+    {
+      "id": 146,
+      "french": "dihydro tagétone",
+      "english": "dihydro tagetone",
+      "chinese": "二氫萬壽菊酮"
+    },
+    {
+      "id": 147,
+      "french": "dihydrocarvone",
+      "english": "dihydrocarvone",
+      "chinese": "二氫香芹酮"
+    },
+    {
+      "id": 148,
+      "french": "dihydrocolumellarine",
+      "english": "dihydrocolumellarine",
+      "chinese": "雙氫中柱內酯(γ-內酯)"
+    },
+    {
+      "id": 149,
+      "french": "dihydroligustilide",
+      "english": "dihydro ligustilide",
+      "chinese": "二氫蒿苯內酯"
+    },
+    {
+      "id": 150,
+      "french": "dihydrolippione",
+      "english": "dihydro lippione",
+      "chinese": "二氫過江藤酮"
+    },
+    {
+      "id": 151,
+      "french": "dihydrotagétone",
+      "english": "dihydro tagetone",
+      "chinese": "二氫萬壽菊酮"
+    },
+    {
+      "id": 152,
+      "french": "dihydro-β-ionol",
+      "english": "dihydro-β-ionol",
+      "chinese": "二氫-β-紫羅蘭醇"
+    },
+    {
+      "id": 153,
+      "french": "dillapiole",
+      "english": "dillapiole",
+      "chinese": "蒔蘿酮"
+    },
+    {
+      "id": 154,
+      "french": "diosphénols",
+      "english": "diosphenols",
+      "chinese": "布枯腦"
+    },
+    {
+      "id": 155,
+      "french": "diptérocarpol",
+      "english": "dipterocarpol",
+      "chinese": "龍腦香醇酮"
+    },
+    {
+      "id": 156,
+      "french": "disulfide",
+      "english": "disulfide",
+      "chinese": "二硫化物"
+    },
+    {
+      "id": 157,
+      "french": "diterpénoïdes clérodaniques",
+      "english": "clerodanic diterpenoids",
+      "chinese": "克羅烷二萜類"
+    },
+    {
+      "id": 158,
+      "french": "drimane",
+      "english": "drimane",
+      "chinese": "補身烷"
+    },
+    {
+      "id": 159,
+      "french": "E",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 160,
+      "french": "élémicine",
+      "english": "elemicin",
+      "chinese": "欖香素"
+    },
+    {
+      "id": 161,
+      "french": "élémol",
+      "english": "elemol",
+      "chinese": "欖香醇"
+    },
+    {
+      "id": 162,
+      "french": "eremophilane",
+      "english": "eremophilane",
+      "chinese": "艾里莫分烷"
+    },
+    {
+      "id": 163,
+      "french": "ester de benzyle",
+      "english": "benzyl esters",
+      "chinese": "芐酯"
+    },
+    {
+      "id": 164,
+      "french": "estragole = methyl chavicol",
+      "english": "estragole",
+      "chinese": "艾草醚=甲基醚蔞葉酚"
+    },
+    {
+      "id": 165,
+      "french": "eucalyptol",
+      "english": "eucalyptol=1,8 cineole",
+      "chinese": "桉(葉)腦=1,8桉油醇"
+    },
+    {
+      "id": 166,
+      "french": "eucarvone",
+      "english": "eucarvone",
+      "chinese": "優香芹酮"
+    },
+    {
+      "id": 167,
+      "french": "eudesmol",
+      "english": "eudesmol",
+      "chinese": "桉葉醇"
+    },
+    {
+      "id": 168,
+      "french": "eugénol",
+      "english": "eugenol",
+      "chinese": "丁香酚"
+    },
+    {
+      "id": 169,
+      "french": "eugénol méthyl éther",
+      "english": "eugenol methyl ether=methyl eugenol",
+      "chinese": "甲基醚丁香酚"
+    },
+    {
+      "id": 170,
+      "french": "F",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 171,
+      "french": "farnésène",
+      "english": "farnesene",
+      "chinese": "金合歡烯"
+    },
+    {
+      "id": 172,
+      "french": "farnésol",
+      "english": "farnesol",
+      "chinese": "金合歡醇"
+    },
+    {
+      "id": 173,
+      "french": "fenchol",
+      "english": "fenchol",
+      "chinese": "葑醇"
+    },
+    {
+      "id": 174,
+      "french": "fenchone",
+      "english": "fenchone",
+      "chinese": "葑酮"
+    },
+    {
+      "id": 175,
+      "french": "ferruginol",
+      "english": "ferruginol",
+      "chinese": "彌羅松酚"
+    },
+    {
+      "id": 176,
+      "french": "forskoline=coléonol",
+      "english": "forskoline=coleonol",
+      "chinese": "毛喉素"
+    },
+    {
+      "id": 177,
+      "french": "furacoumarines / furocoumarines",
+      "english": "furacoumarines / furocoumarines",
+      "chinese": "呋喃香豆素"
+    },
+    {
+      "id": 178,
+      "french": "furano-eudesma-1,3-diène",
+      "english": "furano-eudesma-1,3-diene",
+      "chinese": "呋喃桉-1,3-二烯"
+    },
+    {
+      "id": 179,
+      "french": "furanogermacrone",
+      "english": "furanogermacrone",
+      "chinese": "呋喃木根老鸛草酮"
+    },
+    {
+      "id": 180,
+      "french": "furanone",
+      "english": "furanone",
+      "chinese": "呋喃酮"
+    },
+    {
+      "id": 181,
+      "french": "G",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 182,
+      "french": "gaïacol",
+      "english": "gaiacol",
+      "chinese": "癒創木酚"
+    },
+    {
+      "id": 183,
+      "french": "géosmine",
+      "english": "geosmin",
+      "chinese": "土臭素"
+    },
+    {
+      "id": 184,
+      "french": "géranial",
+      "english": "geranial",
+      "chinese": "香葉醛"
+    },
+    {
+      "id": 185,
+      "french": "géraniol",
+      "english": "geraniol",
+      "chinese": "香葉醇"
+    },
+    {
+      "id": 186,
+      "french": "germacrène",
+      "english": "germacrene",
+      "chinese": "大根老鸛草烯"
+    },
+    {
+      "id": 187,
+      "french": "germacrone",
+      "english": "germacrone",
+      "chinese": "大根老鸛草酮"
+    },
+    {
+      "id": 188,
+      "french": "globulol",
+      "english": "glogulol",
+      "chinese": "藍桉醇"
+    },
+    {
+      "id": 189,
+      "french": "guaiazulène",
+      "english": "guaiazulene",
+      "chinese": "癒創天藍烴"
+    },
+    {
+      "id": 190,
+      "french": "guaiol",
+      "english": "guaiol",
+      "chinese": "癒創木醇"
+    },
+    {
+      "id": 191,
+      "french": "H",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 192,
+      "french": "hinokitiol",
+      "english": "hinokitiol",
+      "chinese": "扁柏醇"
+    },
+    {
+      "id": 193,
+      "french": "hyperforine",
+      "english": "hyperforin",
+      "chinese": "貫葉金絲桃素"
+    },
+    {
+      "id": 194,
+      "french": "I",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 195,
+      "french": "impératorine",
+      "english": "imperatorin",
+      "chinese": "歐前胡素"
+    },
+    {
+      "id": 196,
+      "french": "indole",
+      "english": "indole",
+      "chinese": "吲哚"
+    },
+    {
+      "id": 197,
+      "french": "ionone",
+      "english": "ionone",
+      "chinese": "紫羅蘭酮"
+    },
+    {
+      "id": 198,
+      "french": "iridolactone",
+      "english": "iridolactone",
+      "chinese": "虹彩內酯"
+    },
+    {
+      "id": 199,
+      "french": "irone",
+      "english": "irone",
+      "chinese": "鳶尾酮"
+    },
+    {
+      "id": 200,
+      "french": "isoartémesie cétone",
+      "english": "isoartemesia ketone",
+      "chinese": "異蒿酮"
+    },
+    {
+      "id": 201,
+      "french": "iso-artémisia alcool",
+      "english": "alcohol iso-artemisia",
+      "chinese": "異蒿醇"
+    },
+    {
+      "id": 202,
+      "french": "isobutanol",
+      "english": "isobutanol",
+      "chinese": "異丁醇"
+    },
+    {
+      "id": 203,
+      "french": "isobutyrate d'isobutyle",
+      "english": "isobutyl isobutyrate",
+      "chinese": "異丁酸異丁酯"
+    },
+    {
+      "id": 204,
+      "french": "Isobutyrate de 2-méthyl propyle",
+      "english": "2-methyl propyl isobutyrate",
+      "chinese": "異丁酸2-甲基丙酯"
+    },
+    {
+      "id": 205,
+      "french": "isobutyrates",
+      "english": "isobutyrate",
+      "chinese": "異丁酸"
+    },
+    {
+      "id": 206,
+      "french": "isoeugénol",
+      "english": "isoeugenol",
+      "chinese": "異丁香酚"
+    },
+    {
+      "id": 207,
+      "french": "iso-impératorine",
+      "english": "iso-imperatorin",
+      "chinese": "異歐前胡素"
+    },
+    {
+      "id": 208,
+      "french": "isomenthone",
+      "english": "isomenthone",
+      "chinese": "異薄荷酮"
+    },
+    {
+      "id": 209,
+      "french": "isopinocamphone",
+      "english": "isopinocamphone",
+      "chinese": "異松香酮"
+    },
+    {
+      "id": 210,
+      "french": "isothiocyanate d'allyle",
+      "english": "allyl isothiocyanate",
+      "chinese": "異硫氰酸烯丙酯"
+    },
+    {
+      "id": 211,
+      "french": "isothiocyanate de benzyle",
+      "english": "benzyl isothiocyanate",
+      "chinese": "異硫氰酸苄酯"
+    },
+    {
+      "id": 212,
+      "french": "iso-thujones",
+      "english": "iso-thujones",
+      "chinese": "異側柏酮"
+    },
+    {
+      "id": 213,
+      "french": "italidiones",
+      "english": "italidiones",
+      "chinese": "義大利酮"
+    },
+    {
+      "id": 214,
+      "french": "isoxazoles",
+      "english": "isoxazoles",
+      "chinese": "異噁唑"
+    },
+    {
+      "id": 215,
+      "french": "J",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 216,
+      "french": "jasmine lactone",
+      "english": "jasmin lactone",
+      "chinese": "茉莉內酯"
+    },
+    {
+      "id": 217,
+      "french": "jasmonates",
+      "english": "jasmonate",
+      "chinese": "茉莉酮酸"
+    },
+    {
+      "id": 218,
+      "french": "jasmone",
+      "english": "jasmone",
+      "chinese": "茉莉酮/素馨酮"
+    },
+    {
+      "id": 219,
+      "french": "K",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 220,
+      "french": "khelline",
+      "english": "khellin",
+      "chinese": "阿密茴素"
+    },
+    {
+      "id": 221,
+      "french": "L",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 222,
+      "french": "labdanique",
+      "english": "labdane",
+      "chinese": "半日花烷"
+    },
+    {
+      "id": 223,
+      "french": "lachnophyllum méthyl esters",
+      "english": "lachnophyllum methyl esters",
+      "chinese": "毛葉醇甲酯"
+    },
+    {
+      "id": 224,
+      "french": "lactones azulénogénes",
+      "english": "azulenogenic lactones",
+      "chinese": "前母菊天藍烴內酯/母菊素"
+    },
+    {
+      "id": 225,
+      "french": "lancéols",
+      "english": "lanceol",
+      "chinese": "(澳)白檀醇"
+    },
+    {
+      "id": 226,
+      "french": "lavandulol",
+      "english": "lavandulol",
+      "chinese": "薰衣草醇"
+    },
+    {
+      "id": 227,
+      "french": "leptospermone",
+      "english": "leptospermone",
+      "chinese": "纖精酮"
+    },
+    {
+      "id": 228,
+      "french": "liguloxide",
+      "english": "liguloxide",
+      "chinese": "棗吾醚"
+    },
+    {
+      "id": 229,
+      "french": "ligustilide",
+      "english": "ligustilide",
+      "chinese": "蒿本內酯/川芎內酯"
+    },
+    {
+      "id": 230,
+      "french": "limettine",
+      "english": "limettin",
+      "chinese": "萊姆素"
+    },
+    {
+      "id": 231,
+      "french": "limonène",
+      "english": "limonene",
+      "chinese": "檸檬烯"
+    },
+    {
+      "id": 232,
+      "french": "linalol",
+      "english": "linalool",
+      "chinese": "芳樟醇/沉香醇"
+    },
+    {
+      "id": 233,
+      "french": "linalol oxyde",
+      "english": "linalool oxide",
+      "chinese": "芳樟醇氧化物"
+    },
+    {
+      "id": 234,
+      "french": "lindestrène",
+      "english": "lindestrene",
+      "chinese": "烏藥根烯"
+    },
+    {
+      "id": 235,
+      "french": "lippione",
+      "english": "lippione",
+      "chinese": "過江藤酮"
+    },
+    {
+      "id": 236,
+      "french": "lupuline",
+      "english": "lupuline",
+      "chinese": "蛇麻素"
+    },
+    {
+      "id": 237,
+      "french": "M",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 238,
+      "french": "manool",
+      "english": "manool",
+      "chinese": "淚杉醇"
+    },
+    {
+      "id": 239,
+      "french": "marrubine",
+      "english": "marrubin",
+      "chinese": "夏至草素"
+    },
+    {
+      "id": 240,
+      "french": "massoia lactone",
+      "english": "massoia lactone",
+      "chinese": "馬索亞內酯"
+    },
+    {
+      "id": 241,
+      "french": "matricaria  méthyl esters",
+      "english": "matricaria methyl esters",
+      "chinese": "母菊酯"
+    },
+    {
+      "id": 242,
+      "french": "menthofurane",
+      "english": "menthofuran",
+      "chinese": "薄荷呋喃"
+    },
+    {
+      "id": 243,
+      "french": "menthol",
+      "english": "menthol",
+      "chinese": "薄荷醇"
+    },
+    {
+      "id": 244,
+      "french": "menthone",
+      "english": "menthone",
+      "chinese": "薄荷酮"
+    },
+    {
+      "id": 245,
+      "french": "méthyl chavicol",
+      "english": "methyl chavicol",
+      "chinese": "甲基醚蔞葉酚"
+    },
+    {
+      "id": 246,
+      "french": "méthyl eugénol",
+      "english": "methyl eugenol",
+      "chinese": "甲基醚丁香酚"
+    },
+    {
+      "id": 247,
+      "french": "méthylbenzoate",
+      "english": "methyl benzoate",
+      "chinese": "苯甲酸甲酯"
+    },
+    {
+      "id": 248,
+      "french": "méthylcinnamate",
+      "english": "methylcinnamate",
+      "chinese": "肉桂酸甲酯"
+    },
+    {
+      "id": 249,
+      "french": "méthylecitronnellate",
+      "english": "methyl citronnellate",
+      "chinese": "香茅酸甲酯"
+    },
+    {
+      "id": 250,
+      "french": "méthylheptylcétone",
+      "english": "methyl heptyl ketone = 2-nonanone",
+      "chinese": "甲基庚酮"
+    },
+    {
+      "id": 251,
+      "french": "méthyle-jasmonates",
+      "english": "methyl jasmonate",
+      "chinese": "茉莉酮酸甲酯"
+    },
+    {
+      "id": 252,
+      "french": "méthylnonyl cétone",
+      "english": "methylnonyl ketone",
+      "chinese": "甲基壬基酮"
+    },
+    {
+      "id": 253,
+      "french": "méthylsalicylate",
+      "english": "methyl salicylate",
+      "chinese": "水楊酸甲酯"
+    },
+    {
+      "id": 254,
+      "french": "mustakone",
+      "english": "mustakone",
+      "chinese": "莫斯德酮"
+    },
+    {
+      "id": 255,
+      "french": "myrcène",
+      "english": "myrcene",
+      "chinese": "月桂烯"
+    },
+    {
+      "id": 256,
+      "french": "myristicine",
+      "english": "myristicin",
+      "chinese": "肉豆蔻醚"
+    },
+    {
+      "id": 257,
+      "french": "myrténal",
+      "english": "myrtenal",
+      "chinese": "桃金孃烯醛"
+    },
+    {
+      "id": 258,
+      "french": "myrténol",
+      "english": "myrtenol",
+      "chinese": "桃金孃烯醇"
+    },
+    {
+      "id": 259,
+      "french": "N",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 260,
+      "french": "nécrodane",
+      "english": "necrodane",
+      "chinese": "食屍烷"
+    },
+    {
+      "id": 261,
+      "french": "néoanisatine",
+      "english": "neoanisatin",
+      "chinese": "新莽草素"
+    },
+    {
+      "id": 262,
+      "french": "néolignane",
+      "english": "neolignan",
+      "chinese": "新木脂素"
+    },
+    {
+      "id": 263,
+      "french": "népéta lactone",
+      "english": "nepa lactone",
+      "chinese": "荊芥內酯"
+    },
+    {
+      "id": 264,
+      "french": "néral",
+      "english": "neral",
+      "chinese": "橙花醛"
+    },
+    {
+      "id": 265,
+      "french": "nerol",
+      "english": "nerol",
+      "chinese": "橙花醇"
+    },
+    {
+      "id": 266,
+      "french": "nérolidol",
+      "english": "nerolidol",
+      "chinese": "橙花叔醇"
+    },
+    {
+      "id": 267,
+      "french": "N-formyl-pipéridine",
+      "english": "N-formyl-piperidine",
+      "chinese": "N-甲酰派啶"
+    },
+    {
+      "id": 268,
+      "french": "n-hexylcaproate",
+      "english": "hexyl caproate = hexyl hexanoate",
+      "chinese": "n-己酸己酯"
+    },
+    {
+      "id": 269,
+      "french": "nitrophényl éthane",
+      "english": "nitrophenyl ethane",
+      "chinese": "硝基苯乙烷"
+    },
+    {
+      "id": 270,
+      "french": "N-méthyl anthranylate de méthyle",
+      "english": "Methyl N-methyl anthranylate",
+      "chinese": "鄰氨基苯甲酸甲酯"
+    },
+    {
+      "id": 271,
+      "french": "nonanal",
+      "english": "nonanal",
+      "chinese": "壬醛"
+    },
+    {
+      "id": 272,
+      "french": "nootkatone",
+      "english": "nootkatone",
+      "chinese": "諾卡酮"
+    },
+    {
+      "id": 273,
+      "french": "",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 274,
+      "french": "O",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 275,
+      "french": "ociménone",
+      "english": "ocimenone",
+      "chinese": "羅勒烯酮"
+    },
+    {
+      "id": 276,
+      "french": "P",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 277,
+      "french": "paéonol",
+      "english": "paeonol",
+      "chinese": "丹皮酚"
+    },
+    {
+      "id": 278,
+      "french": "para-crésol",
+      "english": "para-cresol",
+      "chinese": "對甲酚"
+    },
+    {
+      "id": 279,
+      "french": "para-cymène",
+      "english": "para-cymene",
+      "chinese": "對異丙基甲苯/對傘花烴"
+    },
+    {
+      "id": 280,
+      "french": "paradols",
+      "english": "paradol",
+      "chinese": "薑酮酚"
+    },
+    {
+      "id": 281,
+      "french": "parthénolide",
+      "english": "parthenolide",
+      "chinese": "小白菊內酯/夏白菊內酯"
+    },
+    {
+      "id": 282,
+      "french": "patchoulol",
+      "english": "patchoulol",
+      "chinese": "廣藿香醇"
+    },
+    {
+      "id": 283,
+      "french": "perillacétone",
+      "english": "perillaketone",
+      "chinese": "紫蘇酮"
+    },
+    {
+      "id": 284,
+      "french": "perillaldehyde",
+      "english": "perillaldehyde",
+      "chinese": "紫蘇醛"
+    },
+    {
+      "id": 285,
+      "french": "phénéthylamines",
+      "english": "phenethylamine",
+      "chinese": "苯乙胺"
+    },
+    {
+      "id": 286,
+      "french": "phtalides",
+      "english": "phthalides",
+      "chinese": "酞內酯"
+    },
+    {
+      "id": 287,
+      "french": "phyllocladène",
+      "english": "phyllocladene",
+      "chinese": "扁枝烯"
+    },
+    {
+      "id": 288,
+      "french": "pinène",
+      "english": "pinene",
+      "chinese": "蒎烯/松油萜"
+    },
+    {
+      "id": 289,
+      "french": "pinocamphone",
+      "english": "pinocamphone",
+      "chinese": "松樟酮"
+    },
+    {
+      "id": 290,
+      "french": "pinocarvéol",
+      "english": "pinocarveol",
+      "chinese": "松香芹醇"
+    },
+    {
+      "id": 291,
+      "french": "pinocarvone",
+      "english": "pinocarvone",
+      "chinese": "松香芹酮"
+    },
+    {
+      "id": 292,
+      "french": "pipériténon oxyde",
+      "english": "piperitenone oxide",
+      "chinese": "胡椒烯酮氧化物"
+    },
+    {
+      "id": 293,
+      "french": "pipériténone",
+      "english": "piperitenone",
+      "chinese": "胡椒烯酮"
+    },
+    {
+      "id": 294,
+      "french": "pipériténol",
+      "english": "piperitenol",
+      "chinese": "胡椒烯醇"
+    },
+    {
+      "id": 295,
+      "french": "pipéritol",
+      "english": "piperitol",
+      "chinese": "胡椒醇"
+    },
+    {
+      "id": 296,
+      "french": "pipériton oxyde",
+      "english": "piperiton oxide",
+      "chinese": "胡椒酮氧化物"
+    },
+    {
+      "id": 297,
+      "french": "pipéritone",
+      "english": "piperitone",
+      "chinese": "胡椒酮"
+    },
+    {
+      "id": 298,
+      "french": "pipéronal",
+      "english": "piperonal",
+      "chinese": "胡椒醛"
+    },
+    {
+      "id": 299,
+      "french": "p-menthadienol",
+      "english": "p-menthadienol",
+      "chinese": "對-薄荷二烯醇"
+    },
+    {
+      "id": 300,
+      "french": "p-menthane-3,8-diol",
+      "english": "p-menthane-3,8-diol",
+      "chinese": "對-薄荷烷-3,8-二醇"
+    },
+    {
+      "id": 301,
+      "french": "p-méthoxycinnamate de méthyle",
+      "english": "methyl p-methoxycinnamate",
+      "chinese": "對-甲氧基肉桂酸甲酯"
+    },
+    {
+      "id": 302,
+      "french": "p-méthoxyphénylacétone",
+      "english": "p-methoxyphenylacetone",
+      "chinese": "對-丙酮大茴香醚"
+    },
+    {
+      "id": 303,
+      "french": "polygodial",
+      "english": "poligodial",
+      "chinese": "水蓼二醛"
+    },
+    {
+      "id": 304,
+      "french": "prècocène I",
+      "english": "preococene I",
+      "chinese": "早熟素I"
+    },
+    {
+      "id": 305,
+      "french": "propionate de néryl",
+      "english": "neryl propionate",
+      "chinese": "丙酸橙花酯"
+    },
+    {
+      "id": 306,
+      "french": "pseudo-guaianolide",
+      "english": "pseudo-guaianolide",
+      "chinese": "偽癒創木內酯類"
+    },
+    {
+      "id": 307,
+      "french": "psoralène",
+      "english": "psoralen",
+      "chinese": "補骨脂素"
+    },
+    {
+      "id": 308,
+      "french": "pulégol",
+      "english": "pulegol",
+      "chinese": "胡薄荷醇"
+    },
+    {
+      "id": 309,
+      "french": "pulégone",
+      "english": "pulegone",
+      "chinese": "胡薄荷酮"
+    },
+    {
+      "id": 310,
+      "french": "pumiloxyde",
+      "english": "pumiloxide",
+      "chinese": "普米氧化物"
+    },
+    {
+      "id": 311,
+      "french": "pyrocoumarines",
+      "english": "pyro coumarins",
+      "chinese": "焦香豆素"
+    },
+    {
+      "id": 312,
+      "french": "S",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 313,
+      "french": "sabinéne",
+      "english": "sabinene",
+      "chinese": "檜烯"
+    },
+    {
+      "id": 314,
+      "french": "safrole",
+      "english": "safrole",
+      "chinese": "黃樟素"
+    },
+    {
+      "id": 315,
+      "french": "salicylate de benzyle",
+      "english": "benzyl salicylate",
+      "chinese": "水楊酸芐酯"
+    },
+    {
+      "id": 316,
+      "french": "salicylate de méthyle",
+      "english": "methyl salicylate",
+      "chinese": "水楊酸甲酯"
+    },
+    {
+      "id": 317,
+      "french": "santolina alcool",
+      "english": "santolina alcohool",
+      "chinese": "棉衫菊醇"
+    },
+    {
+      "id": 318,
+      "french": "sclaréol",
+      "english": "sclareol",
+      "chinese": "香紫蘇醇"
+    },
+    {
+      "id": 319,
+      "french": "sélinènes",
+      "english": "selinen",
+      "chinese": "芹子烯"
+    },
+    {
+      "id": 320,
+      "french": "shyobunone",
+      "english": "shyobunone",
+      "chinese": "菖蒲酮"
+    },
+    {
+      "id": 321,
+      "french": "spathulénol",
+      "english": "spathulenol",
+      "chinese": "匙業桉油烯醇"
+    },
+    {
+      "id": 322,
+      "french": "T",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 323,
+      "french": "tagéténone",
+      "english": "tagetenone",
+      "chinese": "萬壽菊烯酮"
+    },
+    {
+      "id": 324,
+      "french": "tagétones",
+      "english": "tagetone",
+      "chinese": "萬壽菊酮"
+    },
+    {
+      "id": 325,
+      "french": "tanshinones",
+      "english": "tanshinone",
+      "chinese": "丹參酮"
+    },
+    {
+      "id": 326,
+      "french": "terpinéol-4",
+      "english": "terpine-4-ol",
+      "chinese": "萜品烯四醇"
+    },
+    {
+      "id": 327,
+      "french": "thujanol",
+      "english": "thujanol",
+      "chinese": "側柏醇"
+    },
+    {
+      "id": 328,
+      "french": "thujanol-4",
+      "english": "4-thujanol",
+      "chinese": "4-側柏醇"
+    },
+    {
+      "id": 329,
+      "french": "thujol",
+      "english": "thujanol",
+      "chinese": "側柏醇"
+    },
+    {
+      "id": 330,
+      "french": "thujone",
+      "english": "thujone",
+      "chinese": "側柏酮"
+    },
+    {
+      "id": 331,
+      "french": "thymohydroquinone (syn. thymoquinol)",
+      "english": "thymohydroquinone",
+      "chinese": "百里氫醌"
+    },
+    {
+      "id": 332,
+      "french": "thymohydroquinone diméthyl éther",
+      "english": "thymohydroquinone dimethyl ether",
+      "chinese": "二甲醚百里氫醌"
+    },
+    {
+      "id": 333,
+      "french": "thymol",
+      "english": "thymol",
+      "chinese": "百里酚"
+    },
+    {
+      "id": 334,
+      "french": "thymoquinone",
+      "english": "thymoquinone",
+      "chinese": "百里醌"
+    },
+    {
+      "id": 335,
+      "french": "tiglate de géranyle",
+      "english": "geranyl tiglate",
+      "chinese": "惕各酸香葉酯"
+    },
+    {
+      "id": 336,
+      "french": "toddalolactone",
+      "english": "toddalolactone",
+      "chinese": "飛龍掌血內酯"
+    },
+    {
+      "id": 337,
+      "french": "torreyol",
+      "english": "torreyol",
+      "chinese": "香榧醇"
+    },
+    {
+      "id": 338,
+      "french": "totarol",
+      "english": "totarol",
+      "chinese": "桃拓酚"
+    },
+    {
+      "id": 339,
+      "french": "tropolone",
+      "english": "tropolone",
+      "chinese": "環庚三烯酚酮"
+    },
+    {
+      "id": 340,
+      "french": "U",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 341,
+      "french": "umbelliférone",
+      "english": "umbelliferone",
+      "chinese": "繖形酮"
+    },
+    {
+      "id": 342,
+      "french": "umbelliprenine",
+      "english": "umbelliprenin",
+      "chinese": "繖形戊烯內酯"
+    },
+    {
+      "id": 343,
+      "french": "umbellulone",
+      "english": "umbellulone",
+      "chinese": "繖柳酮/加州月桂酮"
+    },
+    {
+      "id": 344,
+      "french": "",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 345,
+      "french": "V",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 346,
+      "french": "vanilline",
+      "english": "vanillin",
+      "chinese": "香草醛"
+    },
+    {
+      "id": 347,
+      "french": "vanilloïdes",
+      "english": "vanilloids",
+      "chinese": "香草基類化合物"
+    },
+    {
+      "id": 348,
+      "french": "verbénol",
+      "english": "verbenol",
+      "chinese": "馬鞭烯醇"
+    },
+    {
+      "id": 349,
+      "french": "verbénone",
+      "english": "verbenone",
+      "chinese": "馬鞭草酮"
+    },
+    {
+      "id": 350,
+      "french": "vétivones",
+      "english": "vetivone",
+      "chinese": "岩蘭酮"
+    },
+    {
+      "id": 351,
+      "french": "viridiflorène",
+      "english": "viridiflorene",
+      "chinese": "綠花白千層烯"
+    },
+    {
+      "id": 352,
+      "french": "viridiflorol",
+      "english": "viridiflorol",
+      "chinese": "綠花白千層醇"
+    },
+    {
+      "id": 353,
+      "french": "X",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 354,
+      "french": "xanthorrhizol",
+      "english": "xanthorrhizol",
+      "chinese": "束骨薑黃醇"
+    },
+    {
+      "id": 355,
+      "french": "Y",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 356,
+      "french": "ylangène",
+      "english": "ylangene",
+      "chinese": "依蘭烯"
+    },
+    {
+      "id": 357,
+      "french": "yogomi alcool",
+      "english": "yogomi alcohol",
+      "chinese": "艾醇"
+    },
+    {
+      "id": 358,
+      "french": "Z",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 359,
+      "french": "zérumbone",
+      "english": "zerumbone",
+      "chinese": "花薑酮"
+    },
+    {
+      "id": 360,
+      "french": "ziérone",
+      "english": "zierone",
+      "chinese": "桔利酮"
+    },
+    {
+      "id": 361,
+      "french": "zingérone",
+      "english": "zingerone",
+      "chinese": "薑酮"
+    },
+    {
+      "id": 362,
+      "french": "zingibérène",
+      "english": "zingiberene",
+      "chinese": "薑烯"
+    },
+    {
+      "id": 363,
+      "french": "α",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 364,
+      "french": "α-copaène",
+      "english": "α-copaene",
+      "chinese": "α-古巴烯"
+    },
+    {
+      "id": 365,
+      "french": "α-élèmene",
+      "english": "α-elemene",
+      "chinese": "α-欖香烯"
+    },
+    {
+      "id": 366,
+      "french": "α-farnésène",
+      "english": "α-farnesene",
+      "chinese": "α-金合歡烯"
+    },
+    {
+      "id": 367,
+      "french": "α-gurjunène",
+      "english": "α-gurjunene",
+      "chinese": "α-古芸烯"
+    },
+    {
+      "id": 368,
+      "french": "α-humulène",
+      "english": "α-humulene",
+      "chinese": "α-蛇麻烯"
+    },
+    {
+      "id": 369,
+      "french": "α-irone",
+      "english": "α-irone",
+      "chinese": "α-鳶尾酮"
+    },
+    {
+      "id": 370,
+      "french": "α-nécrodol",
+      "english": "α-necrodol",
+      "chinese": "α-食屍醇"
+    },
+    {
+      "id": 371,
+      "french": "α-phellandrène",
+      "english": "α-phellandrene",
+      "chinese": "α-水芹烯"
+    },
+    {
+      "id": 372,
+      "french": "α-terpinène",
+      "english": "α-terpinene",
+      "chinese": "α-萜品烯"
+    },
+    {
+      "id": 373,
+      "french": "α-terpinéol",
+      "english": "α-terpineol",
+      "chinese": "α-萜品醇"
+    },
+    {
+      "id": 374,
+      "french": "α-thujène",
+      "english": "α-thujene",
+      "chinese": "α-側柏烯"
+    },
+    {
+      "id": 375,
+      "french": "β",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 376,
+      "french": "β-asarone",
+      "english": "β-asarone",
+      "chinese": "β-細辛醚"
+    },
+    {
+      "id": 377,
+      "french": "β-caryophyllène",
+      "english": "β-caryophyllene",
+      "chinese": "β-石竹烯/β-丁香油烴"
+    },
+    {
+      "id": 378,
+      "french": "β-diones",
+      "english": "β-dione",
+      "chinese": "β-雙酮"
+    },
+    {
+      "id": 379,
+      "french": "β-élèmene",
+      "english": "β-elemene",
+      "chinese": "β-欖香烯"
+    },
+    {
+      "id": 380,
+      "french": "β-ionone",
+      "english": "β-ionone",
+      "chinese": "β-紫羅蘭酮"
+    },
+    {
+      "id": 381,
+      "french": "β-ocimène",
+      "english": "β-ocimene",
+      "chinese": "β-羅勒烯"
+    },
+    {
+      "id": 382,
+      "french": "β-sesquiphellandrène",
+      "english": "β-sesquiphallandreene",
+      "chinese": "β-倍半水芹烯"
+    },
+    {
+      "id": 383,
+      "french": "γ",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 384,
+      "french": "γ-cadinène",
+      "english": "γ-cadinene",
+      "chinese": "γ-杜松烯"
+    },
+    {
+      "id": 385,
+      "french": "γ-muurolène",
+      "english": "γ-muurolene",
+      "chinese": "γ-依蘭油烯"
+    },
+    {
+      "id": 386,
+      "french": "γ-nonalactone",
+      "english": "γ-nonalactone",
+      "chinese": "γ-王內酯"
+    },
+    {
+      "id": 387,
+      "french": "δ",
+      "english": "",
+      "chinese": ""
+    },
+    {
+      "id": 388,
+      "french": "δ-3-carène",
+      "english": "δ-3-carene",
+      "chinese": "δ-3蒈烯"
+    }
+  ],
+  "total": 388,
+  "lastUpdated": "2026-01-28"
+}

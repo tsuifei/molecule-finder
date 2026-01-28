@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="芳香分子查詢系統 - 資料管理介面">
+  <title>資料管理 | Molecule Finder Admin</title>
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/admin.css">
+</head>
+<body>
+  <div class="admin-container">
+    <!-- 頭部 -->
+    <header class="admin-header">
+      <a href="./index.html" class="back-link">← 返回查詢介面</a>
+      <div class="logo">⚙️</div>
+      <h1>資料管理系統</h1>
+      <p class="subtitle">CSV 匯入與 JSON 資料管理</p>
+    </header>
+
+    <!-- 統計資訊 -->
+    <section class="admin-section">
+      <h2>📊 資料統計</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value" id="totalMolecules">0</div>
+          <div class="stat-label">分子總數</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="lastUpdated">-</div>
+          <div class="stat-label">最後更新</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CSV 匯入 -->
+    <section class="admin-section">
+      <h2>📤 CSV 檔案匯入</h2>
+      <p>上傳 CSV 檔案以更新分子資料庫。請確保 CSV 格式正確。</p>
+
+      <div class="upload-area" id="uploadArea">
+        <div class="upload-icon">📁</div>
+        <h3>拖放 CSV 檔案至此</h3>
+        <p>或點擊選擇檔案</p>
+        <button class="upload-btn">選擇檔案</button>
+      </div>
+
+      <input type="file" id="csvFile" class="file-input" accept=".csv,.txt">
+
+      <div class="file-info" id="fileInfo">
+        <p><strong>檔案名稱:</strong> <span id="fileName">-</span></p>
+        <p><strong>檔案大小:</strong> <span id="fileSize">-</span></p>
+      </div>
+
+      <div class="format-info">
+        <h4>📝 CSV 格式要求</h4>
+        <p>CSV 檔案必須包含以下欄位 (第一行為標題):</p>
+        <pre>法文,英文,中文
+[6]-gingérol,[6]-gingerol,[6]-薑醇
+1,8-cinéole,1,8-cineole,1,8-桉油醇</pre>
+        <p>注意事項:</p>
+        <ul>
+          <li>第一行必須是標題: 法文,英文,中文</li>
+          <li>使用逗號 (,) 分隔欄位</li>
+          <li>如果內容包含逗號,請用引號 "" 包起來</li>
+          <li>檔案編碼請使用 UTF-8</li>
+        </ul>
+      </div>
+
+      <div class="action-buttons">
+        <button class="btn btn-primary" id="processBtn" disabled>
+          🔄 處理 CSV
+        </button>
+        <button class="btn btn-outline" id="clearBtn">
+          🗑️ 清除
+        </button>
+      </div>
+
+      <div class="message" id="message"></div>
+    </section>
+
+    <!-- 資料預覽 -->
+    <section class="admin-section" id="previewSection" style="display: none;">
+      <h2>👁️ 資料預覽</h2>
+      <p>顯示前 50 筆資料</p>
+
+      <div class="data-preview">
+        <table class="preview-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>法文</th>
+              <th>英文</th>
+              <th>中文</th>
+            </tr>
+          </thead>
+          <tbody id="previewBody">
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- JSON 下載 -->
+    <section class="admin-section">
+      <h2>📥 JSON 資料下載</h2>
+      <p>下載當前資料為 JSON 格式,可用於手動更新 data/molecule.json 檔案。</p>
+
+      <div class="action-buttons">
+        <button class="btn btn-secondary" id="downloadBtn" disabled>
+          💾 下載 JSON
+        </button>
+      </div>
+
+      <div class="format-info">
+        <h4>ℹ️ 使用說明</h4>
+        <p>下載 JSON 後的使用步驟:</p>
+        <ol>
+          <li>點擊「下載 JSON」按鈕,儲存檔案</li>
+          <li>將下載的檔案重新命名為 <code>molecule.json</code></li>
+          <li>替換專案中的 <code>data/molecule.json</code> 檔案</li>
+          <li>重新載入查詢介面以查看更新</li>
+        </ol>
+        <p><strong>GitHub Pages 部署:</strong> 如果使用 GitHub Pages,需要將更新後的檔案推送到 repository。</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="./assets/js/admin.js"></script>
+</body>
+</html>
