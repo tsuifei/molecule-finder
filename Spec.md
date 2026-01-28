@@ -7,9 +7,13 @@
 **開發日期**: 2026-01-28
 **部署平台**: GitHub Pages
 **網站 URL**: https://tsuifei.github.io/molecule-finder/
+**Repository**: Private（程式碼私有）
+**網站**: Public（公開訪問，需密碼登入）
 
 ### 專案目標
 提供一個簡潔易用的芳香分子多語言查詢系統，支援繁體中文、英文、法文三種語言的模糊搜尋，幫助使用者快速查找精油化學成分資訊。
+
+⚠️ **安全性提醒**: 雖然 GitHub Repository 是私有的，但 GitHub Pages 網站是公開可訪問的。密碼保護僅提供基本存取控制，不適合存放高度機密資料。詳見「安全性與隱私」章節。
 
 ### 設計理念
 - **自然療癒風格**: 採用綠色系主色調，營造舒適的視覺體驗
@@ -341,29 +345,94 @@ molecule-finder/
 
 ## 🔐 安全性與隱私
 
+### 重要安全性說明
+
+⚠️ **GitHub Repository vs GitHub Pages**
+- **Repository**: Private（私有）- 程式碼不公開
+- **GitHub Pages**: Public（公開）- 任何人都可以訪問網站
+- **影響**:
+  - 網站 URL (https://tsuifei.github.io/molecule-finder/) 是公開可訪問的
+  - 任何知道 URL 的人都可以訪問登入頁面
+  - 雖然需要密碼才能進入系統，但密碼寫在前端程式碼中（可透過開發者工具查看）
+  - 適合內部使用或小型團隊，不適合高度機密資料
+
 ### 密碼保護
+
+**基本資訊**:
 - **方式**: 前端 JavaScript 驗證
 - **儲存**: localStorage（明文）
-- **安全級別**: 低（適合內部使用或小型團隊）
-- **注意事項**:
-  - 密碼可在程式碼中被檢視
-  - 不適合高安全性需求場景
-  - 建議定期更換密碼
+- **安全級別**: ⚠️ 低（適合內部使用或小型團隊）
+- **密碼**: `france2026`（寫在程式碼中）
+
+**安全性限制**:
+- ❌ 密碼可在前端程式碼中被檢視（開啟開發者工具即可看到）
+- ❌ 無後端驗證，完全依賴前端 JavaScript
+- ❌ 網站 URL 是公開的，任何人都可以訪問
+- ❌ 不適合存放敏感或機密資料
+
+**適用場景**:
+- ✅ 內部團隊知識分享
+- ✅ 教學參考資料
+- ✅ 公開但需要簡單存取控制的資訊
+- ✅ 防止一般大眾隨意瀏覽
+
+**不適用場景**:
+- ❌ 商業機密資料
+- ❌ 個人隱私資料
+- ❌ 需要合規性的資料（如 GDPR、HIPAA）
+- ❌ 高安全性需求的應用
+
+**改善建議**:
+- 定期更換密碼（修改 `assets/js/app.js` 和 `assets/js/admin.js`）
+- 不要在密碼保護下存放真正機密的資料
+- 考慮使用後端 API 進行真正的身份驗證
+- 使用 GitHub Private Pages（需要 GitHub Pro）
 
 ### 資料隱私
-- 無後端服務器，不收集用戶資料
+
+**資料收集**:
+- ✅ 無後端服務器，不收集用戶資料
+- ✅ 不使用 Google Analytics 或其他追蹤工具
+- ✅ 無 Cookie（僅使用 localStorage）
+
+**本地儲存**:
 - 搜尋歷史僅儲存於本地 localStorage
+- 授權資訊僅儲存於本地 localStorage
 - 可手動清除瀏覽器資料以移除所有記錄
+
+**資料存取**:
+- 分子資料庫（molecule.json）是靜態檔案，任何訪問網站的人都可以下載
+- 無使用者帳號系統，無個人資料
 
 ---
 
 ## 🚀 部署說明
 
+### GitHub Repository 設定
+
+**Repository 狀態**:
+- **可見性**: Private（私有）
+- **程式碼**: 僅 Repository 成員可見
+- **協作**: 需要邀請才能存取
+
+**GitHub Pages 狀態**:
+- **可見性**: Public（公開）
+- **網站 URL**: https://tsuifei.github.io/molecule-finder/
+- **訪問限制**: 任何人都可以訪問網站（但需密碼登入）
+- **資料檔案**: 公開可下載（molecule.json）
+
+⚠️ **重要提醒**:
+- Repository 是私有的，但 GitHub Pages 網站是公開的
+- 這是 GitHub Pages 的設計特性：Private Repository 也可以有 Public Pages
+- 如需完全私密的網站，需使用 GitHub Enterprise 或其他私有主機
+- 密碼保護只是基本的存取控制，不是真正的安全防護
+
 ### GitHub Pages 設定
-1. Repository: `molecule-finder`
+1. Repository: `molecule-finder` (Private)
 2. Branch: `main`
 3. Folder: `/ (root)`
-4. 自動部署: Push 後 1-2 分鐘生效
+4. Visibility: Public GitHub Pages
+5. 自動部署: Push 後 1-2 分鐘生效
 
 ### 更新流程
 1. 修改程式碼或資料
